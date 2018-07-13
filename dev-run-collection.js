@@ -8,7 +8,7 @@ var con = mysql.createConnection({
   });
 
 function cleanUpDatabase() {
-    var sqlQuery = 'DELETE FROM TestTable WHERE ColumName LIKE "[POSTMAN]";';
+    var sqlQuery = 'DELETE FROM TestTable WHERE ColumName LIKE "[POSTMAN]%";';
     
     con.connect(function(err) {
         if (err) throw err;
@@ -41,5 +41,6 @@ newman.run({
     else {
         console.log('Testy zakończono.');
         // po testach możemy na przykład posprzątać w bazie
+        cleanUpDatabase();
     }
 });
