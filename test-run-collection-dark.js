@@ -22,15 +22,15 @@ function cleanUpDatabase() {
 
 newman.run({
     collection: require('./collections/sample-collection.json'),
-    globals: require('./envs/DEV.postman_environment.json'),
+    globals: require('./envs/TEST.postman_environment.json'),
     iterationCount: 1,
     delayRequest: 0,
     insecure: true,
     reporters: 'html',
     reporter: {
         html: {
-            template: './templates/bright-template.hbs',
-            export: './reports/bright-report.html'
+            template: './templates/dark-template.hbs',
+            export: './reports/dark-report.html'
         }
     }
 }).on('start', function (err, args) { 
