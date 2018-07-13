@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/misiekofski/newman-as-node-module#readme",
   "dependencies": {
+    "async": "^2.6.1",
     "mysql": "^2.15.0",
     "newman": "^3.10.0",
     "newman-reporter-html": "^1.0.0-beta.1"
