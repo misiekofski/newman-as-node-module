@@ -3,19 +3,23 @@ var async = require('async');
 
 var timestamp = Date.now();
 
-options = {
-    collection: require('./collections/sample-collection.json'),
-    reporters: 'html',
-    reporter: {
-        html: {
-            template: './templates/default-template.hbs',
-            export: './reports/parallelReport' + timestamp + '.html'
+function options() {
+    timestamp +=1;
+    obj = {
+        collection: require('./collections/sample-collection.json'),
+        reporters: 'html',
+        reporter: {
+            html: {
+                template: './templates/bright-template.hbs',
+                export: './reports/parallelReport' + timestamp + '.html'
+            }
         }
     }
+    return obj;
 }
 
 parallelCollectionRun = function(done) {
-    newman.run(options, done);
+    newman.run(options(), done);
 };
 
 async.parallel ( [
