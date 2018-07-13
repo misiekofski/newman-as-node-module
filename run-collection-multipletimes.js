@@ -10,7 +10,8 @@ options = {
             export: './reports/parallelReport.html'
         }
     }
-},
+}
+
 parallelCollectionRun = function(done) {
     newman.run(options, done);
 };
