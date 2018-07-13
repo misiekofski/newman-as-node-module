@@ -1,13 +1,15 @@
 var newman = require('newman'); 
 var async = require('async');
 
+var timestamp = Date.now();
+
 options = {
     collection: require('./collections/sample-collection.json'),
     reporters: 'html',
     reporter: {
         html: {
             template: './templates/default-template.hbs',
-            export: './reports/parallelReport.html'
+            export: './reports/parallelReport' + timestamp + '.html'
         }
     }
 }
