@@ -1,0 +1,24 @@
+{
+  "name": "newman-as-node-module",
+  "version": "1.0.0",
+  "description": "Newman as node module templates",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/misiekofski/newman-as-node-module.git"
+  },
+  "author": "Michal Dobrzycki",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/misiekofski/newman-as-node-module/issues"
+  },
+  "homepage": "https://github.com/misiekofski/newman-as-node-module#readme",
+  "dependencies": {
+    "mysql": "^2.15.0",
+    "newman": "^3.10.0",
+    "newman-reporter-html": "^1.0.0-beta.1"
+  }
+}
