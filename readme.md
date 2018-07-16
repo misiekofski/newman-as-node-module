@@ -10,7 +10,7 @@ Some examples for newman runner below
 ## Usage:
 * `dev-run-collection.js` is a module which runs collection with some options, and then connects to DB and clears test data
 * `test-run-collection.js` is a module which runs collection with some other options, and then connects to DB and clears test data
-* `run-collection-multipletimes.js` is a module which runs collection asyn 100 times in parallel (load tests)
+* `run-collection-multipletimes.js` is a module which runs collection async 100 times (in parallel, so it can be used as load tests)
 * `run-collections-from-folder.js` is a module which runs all collections from a given folder
 
 ## Structure:
