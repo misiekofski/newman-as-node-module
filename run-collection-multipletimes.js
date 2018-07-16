@@ -22,15 +22,10 @@ parallelCollectionRun = function(done) {
     newman.run(options(), done);
 };
 
-async.parallel ( [
-    parallelCollectionRun,
-    parallelCollectionRun,
-    parallelCollectionRun,
-    parallelCollectionRun,
-    parallelCollectionRun
-],
+// create array and to run X times requests in parallel
+requestsArray = Array(100).fill(parallelCollectionRun);
 
-function (err, results) {
+async.parallel (requestsArray, function (err, results) {
     err && console.error(err);
 
     results.forEach(function (result) {
