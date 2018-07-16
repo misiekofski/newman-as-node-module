@@ -1,16 +1,20 @@
 # Newman as Node module:
 
-To jest polska wersja szkieletu do uruchamiania testów API pisanych w Postmanie za pomocą node.js
+Some examples for newman runner below
 
-## Co musimy zainstalować (komendą npm install)
-* newman `runner testów pisanych w Postmanie`
-* mysql `obsługa bazy danych do posprzątania po testach`
-* newman-reporter-html `generator raportów w html`
+## Instructions for install
+* Clone this repository
+* Install https://nodejs.org/en/
+* Run `npm install` from main folder (it requires package.json)
 
-## Instrukcja uruchomienia
-* sklonuj to repozytorium
-* zainstaluj https://nodejs.org/en/
-* w głownym katalogu repozytorium uruchom z linii komend `npm install` - to zainstaluje lokalnie wszystkie elementy z package.json
-* wyeksportuj swoją kolekcje z Postmana do katalogu `collections`
-* wyeksportuj swoje środowisko do katalogu `envs`
-* raporty bedą generowane w katalogu `/reports`
+## Usage:
+* `dev-run-collection.js` is a module which runs collection with some options, and then connects to DB and clears test data
+* `test-run-collection.js` is a module which runs collection with some other options, and then connects to DB and clears test data
+* `run-collection-multipletimes.js` is a module which runs collection asyn 100 times in parallel (load tests)
+* `run-collections-from-folder.js` is a module which runs all collections from a given folder
+
+## Structure:
+* use `/collections` to export tests created in postman
+* use `/envs/` to export environment settings and variables created in postman
+* use `/templates` to store your own modified templates for html reports
+* reports will be created in `/reports` folder which is ignored by this git repository
