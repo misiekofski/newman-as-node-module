@@ -7,11 +7,15 @@ function options() {
     timestamp +=1;
     obj = {
         collection: require('./collections/sample-collection.json'),
-        reporters: 'html',
+        reporters: 'html,confluence',
         reporter: {
             html: {
                 template: './templates/bright-template.hbs',
                 export: './reports/parallelReport' + timestamp + '.html'
+            },
+            confluence: {
+                export: './examples/default-template.wiki',
+                template: './templates/confluence/confluence.hbs' // optional, this will be picked up relative to the directory that Newman runs in.
             }
         }
     }
