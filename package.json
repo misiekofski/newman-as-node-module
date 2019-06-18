@@ -19,7 +19,7 @@
   "dependencies": {
     "async": "^2.6.1",
     "mysql": "^2.15.0",
-    "newman": "^3.10.0",
-    "newman-reporter-html": "^1.0.0-beta.1"
+    "newman": "^4.5.0",
+    "newman-reporter-html": "^1.0.3"
   }
 }
