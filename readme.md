@@ -11,9 +11,9 @@ Some examples for newman runner below
 After `npm install -g newman` you can run
 `newman run collections/sample-collection.json -r cli,junit`
 
-# But of course, you can create your own testing framework with nodejs
+## But of course, you can create your own testing framework with nodejs
 
-## Usage of this repo:
+## Sample scripts:
 * `dev-run-collection.js` is a module which runs collection with some options, and then connects to DB and clears test data
 * `test-run-collection.js` is a module which runs collection with some other options, and then connects to DB and clears test data
 * `run-collection-multipletimes.js` is a module which runs collection async 100 times (in parallel, so it can be used as load tests)
