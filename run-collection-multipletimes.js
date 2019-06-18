@@ -7,7 +7,7 @@ function options() {
     timestamp +=1;
     obj = {
         collection: require('./collections/sample-collection.json'),
-        reporters: 'emojitrain',
+        reporters: ['emojitrain'],
         reporter: {
         }
     }
